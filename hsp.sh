@@ -26,10 +26,7 @@ cat << "EOF"
           |_|_|<___/|_|  |_|_||_|/__/|_|_|\___.|_|  
 EOF
 echo -e "$nc"
-
-printf "                            -+- \e[0m\e[1;77mCoded by: @HxRofo\e[0m -+-\n"
-printf "\n"
-
+echo -e  "                 $yellow-+-$white Coded by:$red @HxRofo $yellow-+-\n $nc"
 sleep 5;
 
 # PACKAGES
@@ -136,7 +133,7 @@ ettercap -Tqi wlan0 -M arp:remote -P dns_spoof /// ;;
 
 		6)  echo -e $yellow " Exiting Script. Good Bye !!"
 sleep 3;
-exit 0 
+exit 
 ;;
 
         esac 
