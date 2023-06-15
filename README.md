@@ -3,7 +3,7 @@ You don't need a second wireless interface or monitor mode. wlan0 is enough. <br
 **Note 1:**
 You need 3G/LTE connection enabled, even if your data is 0 megabytes. <br />
 # 1. **Scenario 1: facebook phishing**
-<img src="images/Screenshot_2023-06-15-20-30-56-352_com.google.android.captiveportallogin.jpg" width="100">
+<img src="images/facebook.jpg" width="100">
 
 # 2. **Scenario 2: fake plugin update with android APK**
 <img src="images/backdoor.jpg" width="100">
