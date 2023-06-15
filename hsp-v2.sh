@@ -85,17 +85,19 @@ function unzip_file {
     echo "Killing PHP server process (PID: $php_pid)..."
     kill "$php_pid"
   fi
-
+clear
   # Unzip the file to /var/www/html/
   unzip -o -qq "$filename" -d "/var/www/html/"
   echo "File '$filename' unzipped successfully to /var/www/html/ directory."
-
+sleep 2
+clear
   # Execute the PHP server from the current working directory
   cd "$(dirname "$0")"
-  php -S 0.0.0.0:8080 -t "/var/www/html/$target_dir" &
+  php -S 0.0.0.0:8080 -t "/var/www/html/$target_dir" > /dev/null 2>&1 &
   php_pid=$!
   echo "PHP server started on port 8080 with document root '$target_dir' (PID: $php_pid)."
   sleep 2
+  clear
 }
 
 # Main menu function
