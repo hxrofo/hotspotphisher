@@ -18,7 +18,7 @@ function display_banner {
 EOF
   echo -e "$nc"
   echo -e "                 $yellow-+-$white Coded by:$red @HxRofo $yellow-+-\n $nc"
-  sleep 5
+  sleep 2
 }
 
 # Function to execute initial setup commands
