@@ -16,8 +16,8 @@ If he installs the apk, you'll get a meterpreter shell. <br />
 <img src="images/wifi.jpg" width="200">
 In this scenario, you can name your hotspot the same name as any wifi network around you, and if the victim connects to it by mistake, he's greeted with a pop up login box that asks for the wifi password.<br />
 
-You can access the logged credentials in the browser. Just type your wlan0 ip:8080/logger.html<br />
-**http://192.168.43.1:8080/logger.html** <br />
+You can access the logged credentials in the browser.<br />
+**http://127.0.0.1:8080/logger.html** <br />
 
 **Feel free to improve the script by modifying the code or providing other fake portals**
           
