@@ -26,8 +26,8 @@ function execute_setup_commands {
   echo -e "\e[33mInstalling and Setting up Tools\e[0m"  # Yellow color for setup message
 
   # Update package lists and install php and unzip
-  # apt update
-  # apt install php unzip -y
+  apt update
+  apt install php unzip -y
 
   sleep 1
 
@@ -73,14 +73,22 @@ function unzip_file {
       ;;
   esac
 
-  # Function to unzip the file to /var/www/html/ 
-   function unzip_file { 
-   filename=$1 
-      if [[ -f "$filename" ]]; then sudo unzip -o -qq "$filename" -d "/var/www/html/" 
-      echo "File '$filename' unzipped successfully to /var/www/html/ directory." 
-       else
-echo "File '$filename' not found."
-        fi
+  # Check if the file exists
+  if [[ ! -f "$filename" ]]; then
+    echo "File '$filename' not found."
+    return
+  fi
+
+  # Kill the process running on port 8080 if it exists
+  local php_pid=$(lsof -ti :8080)
+  if [[ -n "$php_pid" ]]; then
+    echo "Killing PHP server process (PID: $php_pid)..."
+    kill "$php_pid"
+  fi
+
+  # Unzip the file to /var/www/html/
+  sudo unzip -o -qq "$filename" -d "/var/www/html/"
+  echo "File '$filename' unzipped successfully to /var/www/html/ directory."
 
   # Execute the PHP server from the current working directory
   cd "$(dirname "$0")"
@@ -89,7 +97,7 @@ echo "File '$filename' not found."
   echo "PHP server started on port 8080 with document root '$target_dir' (PID: $php_pid)."
   sleep 2
 }
-}
+
 # Main menu function
 function main_menu {
   clear
