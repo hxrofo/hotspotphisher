@@ -87,7 +87,7 @@ function unzip_file {
   fi
 
   # Unzip the file to /var/www/html/
-  sudo unzip -o -qq "$filename" -d "/var/www/html/"
+  unzip -o -qq "$filename" -d "/var/www/html/"
   echo "File '$filename' unzipped successfully to /var/www/html/ directory."
 
   # Execute the PHP server from the current working directory
