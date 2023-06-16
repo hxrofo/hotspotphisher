@@ -2,7 +2,7 @@ I made this basic script and tested it on Kali Nethunter.<br />
 You don't need a second wireless interface or monitor mode. wlan0 is enough. <br />
 
 **Note 1:** <br />
-You need 3G/LTE connection enabled, even if your data is 0 megabytes. <br />
+You need 3G/LTE connection button enabled, but you don't need to be connected to the internet. Even if your data plan is 0 megabytes, the attack works when you activate the mobile data 3G/LTE . <br />
 
 **Note 2:** <br />
 Sometimes you have to try again if the target doesn't change, restart the script, kill php process manually, turn the hotspot on/off or remove the directory from "/var/www/html/". 
