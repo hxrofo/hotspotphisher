@@ -124,7 +124,7 @@ function main_menu {
   echo -e "\e[1m\e[31m[x]\e[0m \e[1mExit\e[0m"
 
  # Prompt in bold yellow color
-  read -p $'\e[1m\e[33mEnter your choice: \e[0m' choice
+  read -p $'\e[1m\e[33mChoose Target and hit Enter: \e[0m' choice
 
   case $choice in
     1)
