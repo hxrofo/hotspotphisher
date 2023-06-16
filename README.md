@@ -1,10 +1,10 @@
 I made this basic script and tested it on Kali Nethunter.<br />
 You don't need a second wireless interface or monitor mode. wlan0 is enough. <br />
 
-**Note 1:**
+**Note 1:** <br />
 You need 3G/LTE connection enabled, even if your data is 0 megabytes. <br />
 
-**Note 2:**
+**Note 2:** <br />
 Sometimes you have to try again if the target doesn't change, restart the script, kill php process manually, turn the hotspot on/off or remove the directory from "/var/www/html/". 
 # 1. **Scenario 1: facebook phishing**
 <img src="images/facebook.jpg" width="100">
