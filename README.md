@@ -1,4 +1,4 @@
-I made this basic script and tested it on Kali Nethunter.<br />
+I made this basic script and tested it on Kali Nethunter (rooted).<br />
 You don't need a second wireless interface or monitor mode. wlan0 is enough. <br />
 
 **Note 1:** <br />
